@@ -7,14 +7,14 @@ use Bitrix\Main\Localization\Loc;
 
 Loc::loadMessages(__FILE__);
 
-if (class_exists('ade_boostrix'))
+if (class_exists('technique102.aitools'))
 {
     return;
 }
 
-class ade_boostrix extends \CModule
+class technique102_aitools extends \CModule
 {
-    public $MODULE_ID = 'ade.boostrix';
+    public $MODULE_ID = 'technique102.aitools';
 
     public $MODULE_VERSION;
 
@@ -36,10 +36,10 @@ class ade_boostrix extends \CModule
             $this->MODULE_VERSION_DATE = $arModuleVersion['VERSION_DATE'];
         }
 
-        $this->MODULE_NAME = Loc::getMessage('ADE_BOOSTRIX_MODULE_NAME');
-        $this->MODULE_DESCRIPTION = Loc::getMessage('ADE_BOOSTRIX_MODULE_DESCRIPTION');
-        $this->PARTNER_NAME = Loc::getMessage('ADE_PARTNER_NAME');
-        $this->PARTNER_URI = Loc::getMessage('ADE_PARTNER_URL');
+        $this->MODULE_NAME = Loc::getMessage('TECHNIQUE102_AITOOLS_MODULE_NAME');
+        $this->MODULE_DESCRIPTION = Loc::getMessage('TECHNIQUE102_AITOOLS_MODULE_DESCRIPTION');
+        $this->PARTNER_NAME = Loc::getMessage('TECHNIQUE102_PARTNER_NAME');
+        $this->PARTNER_URI = Loc::getMessage('TECHNIQUE102_PARTNER_URL');
     }
 
     public function doInstall(): void
@@ -57,16 +57,11 @@ class ade_boostrix extends \CModule
 
     public function installFiles(): bool
     {
-        //CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/ai/install/components", $_SERVER["DOCUMENT_ROOT"]."/bitrix/components", true, true);
-        //CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/ai/install/js", $_SERVER["DOCUMENT_ROOT"]."/bitrix/js", true, true);
-
         return true;
     }
 
     public function uninstallFiles(): bool
     {
-        //DeleteDirFilesEx("/bitrix/js/ai/");
-
         return true;
     }
 }

@@ -21,8 +21,8 @@ $DOCUMENT_ROOT = $_SERVER["DOCUMENT_ROOT"];
 
 require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");
 
-if (!\Bitrix\Main\Loader::includeModule('ade.boostrix')) {
-    fwrite(STDERR, "[CRITICAL ERROR] Необходимо установить модуль \"ade.boostrix\"\n");
+if (!\Bitrix\Main\Loader::includeModule('technique102.aitools')) {
+    fwrite(STDERR, "[CRITICAL ERROR] Необходимо установить модуль \"technique102.aitools\"\n");
     exit(1);
 }
 
@@ -31,7 +31,7 @@ use Mcp\Server\Transport\StdioTransport;
 
 try {
     Server::make()
-    ->setServerInfo('Boostrix MCP', '0.0.1')
+    ->setServerInfo('Bitrix AiTools MCP', '0.0.1')
     ->setDiscovery(
         basePath: __DIR__,
         scanDirs: ['/../lib/tools'],

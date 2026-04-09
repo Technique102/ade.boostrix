@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ade\Boostrix\Tools;
+namespace Technique102\AiTools\Tools;
 
 use Mcp\Capability\Attribute\McpTool;
 
