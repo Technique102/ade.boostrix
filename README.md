@@ -52,6 +52,9 @@
 | `get_iblock_list`      | Список инфоблоков                    |
 | `get_iblock_detail`    | Детали инфоблока со всеми свойствами |
 | `get_iblock_type_list` | Список типов инфоблоков              |
+| **HL-блоки**           |                                      |
+| `get_hlblock_list`     | Список HL-блоков                     |
+| `get_hlblock_detail`   | Детали HL-блока с полями             |
 | **Агенты**             |                                      |
 | `get_agent_list`       | Список агентов (cron-задач)          |
 
